@@ -2,8 +2,8 @@ type TInstrumentType = 'kick' | 'snare' | 'cymbal' | 'hi-hat' | 'crash' | 'tom1'
 type TNoteDuration = '1/2' | '1/4' | '1/8' | '1/16' | '1/32';
 type TArticulation = 'R' | 'L';
 type TOrnament = 'flam' | 'drag';
-export type TNoteGroup = 'single' | 'pair' | 'triplet' | 'quadruplet' | 'quintuplet' | 'sextuplet' | 'tied' | 'mixed';
 
+export type TNoteGroup = 'single' | 'pair' | 'triplet' | 'quadruplet' | 'quintuplet' | 'sextuplet' | 'tied' | 'mixed' | 16;
 
 export interface IDrumNote {
     instrument: TInstrumentType;    // Тип инструмента
