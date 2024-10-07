@@ -2,6 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './app/App.tsx'
 import {createGlobalStyle} from "styled-components";
+import {Provider} from "react-redux";
+import {store} from "./redux/store.ts";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -95,7 +97,9 @@ const GlobalStyle = createGlobalStyle`
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <GlobalStyle/>
-      <App />
+      <Provider store={store}>
+        <GlobalStyle/>
+        <App />
+      </Provider>
   </StrictMode>,
 )

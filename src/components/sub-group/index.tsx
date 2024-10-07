@@ -3,10 +3,9 @@ import styled from "styled-components";
 
 interface IFourBits {
     type: 'kick' | 'snare' | 'cymbal' | 'hi-hat' | 'crash' | 'tom1' | 'tom2' | 'tom3';
-    count: number;
 }
 
-const SubGroup = ({type, count}: IFourBits) => {
+const SubGroup = ({type}: IFourBits) => {
     const SunGroutStyle = styled.div`
         display: flex;
         margin: 5px 10px;
@@ -14,9 +13,7 @@ const SubGroup = ({type, count}: IFourBits) => {
 
     return (
         <SunGroutStyle>
-            {[...new Array(count)].map((_) => (
-                <OneBit type={type}/>
-            ))}
+            <OneBit type={type}/>
         </SunGroutStyle>
     );
 };

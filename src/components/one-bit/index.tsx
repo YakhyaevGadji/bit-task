@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { BitBlock } from "./style.ts";
 
 interface IOneBite {
     type: string;
@@ -9,15 +9,6 @@ const OneBit = ({type}: IOneBite) => {
         kick: 'red',
         snare: 'yellow'
     };
-
-    const BitBlock = styled.div`
-        width: 60px;
-        height: 60px;
-        margin: 3px;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: ${props => props.color};
-    `;
 
     return (
         <BitBlock color={instrumentStyle[type]}/>

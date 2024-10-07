@@ -5,8 +5,7 @@ const App = () => {
     return(
         <Container>
             <AppWrapper>
-                <GroupBits instrument={'snare'} countGroup={3} countBit={4}/>
-                <GroupBits instrument={'kick'} countGroup={3} countBit={4}/>
+                <GroupBits instrument={'snare'}/>
             </AppWrapper>
         </Container>
     );
