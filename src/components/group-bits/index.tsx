@@ -1,14 +1,21 @@
 import SubGroup from "../sub-group";
 import {GroupStyle} from "./style.ts";
+import {useAppSelector} from "../../redux/hook.ts";
 
 interface IGroupBits {
-    instrument: 'kick' | 'snare' | 'cymbal' | 'hi-hat' | 'crash' | 'tom1' | 'tom2' | 'tom3';
+    instrument: 'kick' | 'snare';
 }
 
 const GroupBits = ({ instrument }: IGroupBits) => {
+    const data = useAppSelector((state) => state.data[instrument]);
+
+    console.log(data);
+
     return (
         <GroupStyle color={instrument}>
-            <SubGroup type={instrument}/>
+            {data.map((item) => (
+                <SubGroup key={item.value} type={instrument}/>
+            ))}
         </GroupStyle>
     );
 };
